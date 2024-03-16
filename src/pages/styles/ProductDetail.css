@@ -1,0 +1,31 @@
+.product-card {
+    @apply mx-4 my-8;
+}
+
+.product-image {
+    @apply w-48 h-auto object-cover;
+}
+
+.product-details {
+    @apply flex flex-col justify-between ml-4;
+}
+
+.product-title {
+    @apply text-lg font-bold mb-2;
+}
+
+.product-description {
+    @apply text-sm mb-2;
+}
+
+.product-price {
+    @apply text-lg font-semibold mb-2;
+}
+
+.product-rating {
+    @apply text-sm mb-2;
+}
+
+.add-to-cart-btn {
+    @apply w-full mb-2;
+}
