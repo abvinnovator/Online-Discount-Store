@@ -1,0 +1,68 @@
+/* Navbar CSS */
+.navbar {
+  @apply bg-black;
+}
+
+.container {
+  @apply mx-auto flex justify-between items-center;
+}
+
+.navbar-brand {
+  @apply text-white text-2xl font-bold tracking-wider;
+}
+
+.navbar-toggler {
+  @apply text-white block md:shadow-orange-50;
+   /* Ensure hamburger menu icon is always visible */
+}
+
+.navbar-toggler:focus {
+  @apply outline-none;
+}
+
+.navbar-toggler-icon {
+  @apply block h-6 w-6 text-white; /* Larger toggler icon */
+}
+
+.navbar-nav {
+  @apply hidden md:flex;
+}
+
+.nav-item {
+  @apply ml-4;
+}
+
+.nav-link {
+  @apply text-white font-medium hover:text-gray-300; /* Bold font and subtle hover effect */
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    @apply hidden; /* Hide navbar items on small screens by default */
+  }
+
+  .navbar-collapse {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 w-full left-0 mt-14;
+    display: none; /* Hide by default */
+    position: absolute; /* Position for overlay on smaller screens */
+    top: 100%; /* Position below the navbar */
+    left: 0; /* Align to the left */
+  }
+
+  .navbar-toggler {
+    @apply block; /* Ensure hamburger menu is displayed */
+  }
+
+  .navbar-collapse.show {
+    display: flex; /* Show when toggled */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-item {
+    @apply mt-2 ml-0;
+  }
+
+  .nav-link {
+    @apply text-white block px-4 py-2;
+  }
+}
